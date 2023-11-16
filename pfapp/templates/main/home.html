@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block title %}{{ user }} - Portfolio{% endblock title %}
+
+{% block content %}
+<div class="container">
+    <h1>hjhjjhjh</h1>
+    {% for item in actualuser %}
+        <li>First Name = {{item.firstname}}, Last name = {{item.lastname}}, Profession = {{item.profession}}, Birthday = {{item.birthday}}, Slogan = {{item.introphrase}}, Description = {{item.introtext}}, <img src="{% get_media_prefix %}{{item.logo }}" height="50" width="50">, <img src="{% get_media_prefix %} {{item.photo }}" height="150" width="150"></li>
+    {% endfor %}
+</div>
+{% endblock content %}
